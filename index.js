@@ -1,6 +1,12 @@
 // console.log("Hello World!")
 
 document.addEventListener("DOMContentLoaded", (_e) => {
+  // ページが開かれたときにすぐ動く
+  ['.js-countdownScreen', '.js-finishScreen'].forEach((elementTarget) => {
+    let element = document.querySelector(elementTarget)
+    // カウントダウン画面と終了画面を隠す
+    element.classList.add("hidden-screen")
+  })
   // 「開始」ボタンが押されたら、 js-coutdownScreen のみを表示する
   const startButton = document.querySelector(".js-startButton")
 
